@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `FreshFood_eatery` /*!40100 DEFAULT CHARACTER SET
 USE `FreshFood_eatery`;
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: pandeyji_eatery
+-- Host: localhost    Database: FreshFoodEatery
 -- ------------------------------------------------------
 -- Server version	8.0.31
 
