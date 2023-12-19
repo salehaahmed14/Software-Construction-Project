@@ -1,0 +1,296 @@
+[
+  {
+    "id": "047afb3f-8add-4e4f-b5a4-7269d158d95e",
+    "data": [
+      {
+        "text": "remove ",
+        "userDefined": false
+      },
+      {
+        "text": "pizza",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a22e5c92-31df-468c-bc91-0d320bc7cd13",
+    "data": [
+      {
+        "text": "can you remove ",
+        "userDefined": false
+      },
+      {
+        "text": "fried chicken",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e51d75cf-b3f2-452e-84dc-68896e171fec",
+    "data": [
+      {
+        "text": "I don\u0027t want ",
+        "userDefined": false
+      },
+      {
+        "text": "beef burger",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f590d597-261b-410f-89f5-fa54b31ed7a0",
+    "data": [
+      {
+        "text": "hey, plz get rid of ",
+        "userDefined": false
+      },
+      {
+        "text": "chicken fry",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "fries",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "49405f15-8b4b-42d5-8c4f-835fa6cc3048",
+    "data": [
+      {
+        "text": "delete ",
+        "userDefined": false
+      },
+      {
+        "text": "biryani",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " from my order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "67f3c47e-ec9a-475e-9df2-71b777bfe40a",
+    "data": [
+      {
+        "text": "Please take the ",
+        "userDefined": false
+      },
+      {
+        "text": "pasta",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " off my order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6b7e6545-1f30-4ef9-a0c0-a7b4a3e9aa16",
+    "data": [
+      {
+        "text": "I would like to remove the ",
+        "userDefined": false
+      },
+      {
+        "text": "pizza",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " from my order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "0d2099bf-8e72-4aa9-a12d-bddd0fbcf6e4",
+    "data": [
+      {
+        "text": "Kindly exclude the ",
+        "userDefined": false
+      },
+      {
+        "text": "chicken burger",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " from my order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "bdccf9d2-a354-481f-bd23-7e25761a48c4",
+    "data": [
+      {
+        "text": "I no longer want the ",
+        "userDefined": false
+      },
+      {
+        "text": "loaded fries",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " in my order, please remove it",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "eea54fdf-903a-408a-98e8-927ce937649f",
+    "data": [
+      {
+        "text": "I\u0027d like to exclude ",
+        "userDefined": false
+      },
+      {
+        "text": "plain fries",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " and chicken, please",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "31c94884-c3d3-45a2-b3d2-84d4625a24b4",
+    "data": [
+      {
+        "text": "Kindly take ",
+        "userDefined": false
+      },
+      {
+        "text": "chicken curry",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "fries",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " off the order, please.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "354f6018-5612-4fc5-b7e3-787731954912",
+    "data": [
+      {
+        "text": "No ",
+        "userDefined": false
+      },
+      {
+        "text": "pizza",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " and ",
+        "userDefined": false
+      },
+      {
+        "text": "biryani",
+        "meta": "@food-item",
+        "alias": "food-item",
+        "userDefined": false
+      },
+      {
+        "text": " in my order. please remove.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

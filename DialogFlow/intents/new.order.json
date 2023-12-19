@@ -1,0 +1,41 @@
+{
+  "id": "dbc5b6cf-d10f-47a5-be0e-c02038008e30",
+  "name": "new.order",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Ok, starting a new order. You can say things like \"I want two pizzas and one Plain Fries\". Make sure to specify a quantity for every food item! Also, we have only the following items on our menu: Chicken Curry, Pasta, Pizza, Fried Chicken, Beef Burger, Biryani, Chicken Burger, Plain Fries, and Loaded Fries.",
+            "Starting new order. Specify food items and quantities. For example, you can say, \"I would like to order two pizzas and one plain fries. Also, we have only the following items on our menu: Chicken Curry, Pasta, Pizza, Fried Chicken, Beef Burger, Biryani, Chicken Burger, Plain Fries, and Loaded Fries."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

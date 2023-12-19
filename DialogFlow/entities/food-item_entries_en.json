@@ -1,0 +1,90 @@
+[
+  {
+    "value": "Chicken Curry",
+    "synonyms": [
+      "Curry",
+      "Salan",
+      "Gravy",
+      "Chicken gravy",
+      "stew",
+      "Chicken Curry"
+    ]
+  },
+  {
+    "value": "pasta",
+    "synonyms": [
+      "pasta",
+      "Alfredo",
+      "White sauce pasta",
+      "noodles",
+      "italian pasta"
+    ]
+  },
+  {
+    "value": "pizza",
+    "synonyms": [
+      "pizza",
+      "italian pizza",
+      "cheese pizza",
+      "hot pizza",
+      "flatbread",
+      "chicken pizza"
+    ]
+  },
+  {
+    "value": "fried chicken",
+    "synonyms": [
+      "fried chicken",
+      "fry chicken",
+      "crispy chicken",
+      "broast",
+      "kfc chicken",
+      "tender and crispy chicken"
+    ]
+  },
+  {
+    "value": "beef burger",
+    "synonyms": [
+      "beef burger",
+      "Smash burger",
+      "american burger",
+      "steak burger",
+      "juicy patty burger"
+    ]
+  },
+  {
+    "value": "Biryani",
+    "synonyms": [
+      "Biryani",
+      "Karachi biryani",
+      "chicken biryani",
+      "spicy biryani",
+      "aromatic rice",
+      "rice and chicken"
+    ]
+  },
+  {
+    "value": "plain fries",
+    "synonyms": [
+      "plain fries",
+      "fries",
+      "french fries",
+      "chips",
+      "crisps",
+      "salted fries",
+      "masala fries",
+      "crispy fries"
+    ]
+  },
+  {
+    "value": "loaded fries",
+    "synonyms": [
+      "loaded fries",
+      "pizza fries",
+      "topping fries",
+      "heavy fries",
+      "saucy fries",
+      "chicken fries"
+    ]
+  }
+]

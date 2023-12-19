@@ -1,0 +1,119 @@
+[
+  {
+    "id": "23c04267-0514-448d-92ae-1c0bd4056b1b",
+    "data": [
+      {
+        "text": "Generate a new order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "06a9d4cc-77dd-4987-882a-db13edad7f56",
+    "data": [
+      {
+        "text": "Begin a fresh order placement",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "80f23570-ae11-4946-852d-4dfd40a125d5",
+    "data": [
+      {
+        "text": "Start a new purchase",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6a213f16-33a0-4899-9516-53439769094d",
+    "data": [
+      {
+        "text": "Create a brand-new order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "692b4cf4-b7a7-4a88-b575-3e6253da6bf8",
+    "data": [
+      {
+        "text": "Initiate a fresh order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "bacc11a7-efb6-433d-8c2b-af0d30e5e9d7",
+    "data": [
+      {
+        "text": "I am hungry, want to order something",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "86bbc08a-aa78-483e-a97f-2248f037b247",
+    "data": [
+      {
+        "text": "I would like to order something",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "070b3b81-bba1-4e84-ab0b-73c58450ee5a",
+    "data": [
+      {
+        "text": "Place a new order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "becd1009-fd4e-4d69-90a1-b5badc88d7b3",
+    "data": [
+      {
+        "text": "New Order",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

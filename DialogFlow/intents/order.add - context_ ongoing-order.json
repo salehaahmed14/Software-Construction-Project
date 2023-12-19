@@ -1,0 +1,110 @@
+{
+  "id": "d13dfbfb-0e44-4c41-8043-7febcb705b08",
+  "name": "order.add - context: ongoing-order",
+  "auto": true,
+  "contexts": [
+    "ongoing-order"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "e928d0cd-4452-4549-bac2-5e83bad940cf",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Please specify the exact number of the particular menu item. (e.g. 1 pizza, 4 chicken curry)"
+            },
+            {
+              "lang": "en",
+              "value": "Sorry, but an item can only be added when the total number is specified. (e.g. 1 pizza, 4 chicken curry)"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d505e4ee-9f2a-40a9-8730-e76f6116738f",
+          "name": "food-item",
+          "required": true,
+          "dataType": "@food-item",
+          "value": "$food-item",
+          "defaultValue": "",
+          "isList": true,
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "A specific item name from the menu only is required to place an order. (i.e. Chicken Curry, Pasta, Pizza, Fried Chicken, Beef Burger, Biryani, Chicken Burger, Plain Fries, and Loaded Fries)"
+            },
+            {
+              "lang": "en",
+              "value": "Please specify the name of the item from menu only. (i.e. Chicken Curry, Pasta, Pizza, Fried Chicken, Beef Burger, Biryani, Chicken Burger, Plain Fries, and Loaded Fries)"
+            },
+            {
+              "lang": "en",
+              "value": "Choose one from Chicken Curry, Pasta, Pizza, Fried Chicken, Beef Burger, Biryani, Chicken Burger, Plain Fries, and Loaded Fries."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "67fe42f4-b564-47ea-818f-53b67a531f8b",
+          "name": "date-time",
+          "required": false,
+          "dataType": "@sys.date-time",
+          "value": "$date-time",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Anything else?",
+            "Would you like to add something?",
+            "Is your order complete or would you like to add something else?",
+            "Will that be it?"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

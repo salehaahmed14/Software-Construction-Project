@@ -1,0 +1,35 @@
+{
+  "id": "d577fa39-6ab1-4a38-a4d7-28886e9cef37",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "I didn\u0027t understand. You can say \u0027New Order\u0027 or \u0027Track Order\u0027. Also, in a new order, please mention only items from our available menu: Chicken Curry, Pasta, Pizza, Fried Chicken, Beef Burger, Biryani, Chicken Burger, Plain Fries, and Loaded Fries. Also specify a quantity for each item for example: \"One pizza and two Chicken Burger\""
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
