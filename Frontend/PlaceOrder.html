@@ -12,7 +12,7 @@
 <body>
     <!-- Bootstrap Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">FreshFood Eatery</a>
+        <a class="navbar-brand" href="website.html">FreshFood Eatery</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,56 +33,26 @@
             </ul>
         </div>
     </nav>
-    <div class ="content-container">
-    <div class="container">
-        <div class="item">
-            <img src="images/chicken_curry.jpg" alt="Chicken Curry">
-            <h2>Chicken Curry</h2>
-            <p>Delicious and flavorful Hearty Meal with a Soul warming gravy. </p>
-        </div>
-        <div class="item">
-            <img src="images/pizza.jpg" alt="Pizza">
-            <h2>Pizza</h2>
-            <p>Fresh out of the Oven. Topped with fresh Marinara, Mozeralla and Flavorful Toppings.</p>
-        </div>
-        <div class="item">
-            <img src="images/pasta.jpg" alt="Pasta">
-            <h2>Pasta</h2>
-            <p>Creamy and Cheesy Deliciousness with a rich Alfredo Sauce.</p>
-        </div>
-        <div class="item">
-            <img src="images/chicken_burger.jpg" alt="Chicken Burger">
-            <h2>Chicken Burger</h2>
-            <p>Juicy and Tender Chicken Fillet in a Brioche Bun.</p>
-        </div>
-        <div class="item">
-            <img src="images/beef_burger.jpg" alt="Beef Burger">
-            <h2>Beef Burger</h2>
-            <p>Juicy and Charred to Perfection in a Whole Wheat Bun.</p>
-        </div>
-        <div class="item">
-            <img src="images/plain_fries.jpg" alt="Plain Fries">
-            <h2>Plain Fries</h2>
-            <p> Classic Salted. Great for a Quick Fix.</p>
-        </div>
-        <div class="item">
-            <img src="images/loaded_fries.jpg" alt="Loaded Fries">
-            <h2>Loaded Fries</h2>
-            <p>Loaded with Chicken, Cheese, Veggies and what not to keep those Cravings at Bay.</p>
-        </div>
-        <div class="item">
-            <img src="images/biryani.jpg" alt="Biryani">
-            <h2>Chicken Biryani</h2>
-            <p>Our very own Desi Lovers Paradise. Slow cooked Chicken in Aromatic Spices over a bed of fragrant Rice.</p>
-        </div>
-        <div class="item">
-            <img src="images/fried_chicken.jpg" alt="Fried Chicken">
-            <h2>Fried Chicken</h2>
-            <p>Crispy, Crunchy and Delightful, The Ultimate Cheat Meal.</p>
+    <!-- Bootstrap Grid Layout -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Left Column - Track Your Order -->
+            <div class="col-md-8">
+                <div class="p-4 rounded shadow bg-light" style="height: 250px;">
+                    <h1>Place Your Order!</h1>
+                    <p>Interact with our chatbot to seamlessly place an order by exploring a wide array of menu options available. The chatbot will guide you through the selection process, allowing you to choose items, specify quantities, and customize your order based on your preferences. Enjoy the convenience of a personalized ordering experience with our extensive menu offerings.</p>
+                </div>
+            </div>
+            
+            <!-- Right Column - Chatbot iframe -->
+            <div class="col-md-4">
+                <iframe width="350" height="430" allow="microphone;" 
+                src="https://console.dialogflow.com/api-client/demo/embedded/d3867d0e-4dd0-4b4b-9f7f-dd3560f0a2ef"></iframe>
+            </div>
         </div>
     </div>
-</div>
-    <footer>
+
+    <footer style="margin-top:70px">
         <div class="address">
             <p>123 Main Street, Islamabad</p>
             <p>Pakistan, 44000</p>
