@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Form
 from fastapi import Request
 from fastapi.responses import JSONResponse
 import db_helper as db_helper
@@ -27,6 +27,21 @@ async def handle_request(request: Request):
     }
 
     return intent_handler_dict[intent](parameters, session_id)
+
+@app.post("/submit_form")
+async def submit_form(
+    request: Request,
+    name: str = Form(...),
+    email: str = Form(...),
+    phone: str = Form(...),
+    address: str = Form(...),
+    payment: str = Form(...),
+):
+     print("hello")
+     # Call the insert_customer_order function
+     db_helper.insert_customer_order(name, email, phone, address, payment)
+     
+     return {"message": "Form submitted successfully"}
 
 inprogess_orders = {}
 

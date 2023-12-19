@@ -1,5 +1,3 @@
-
-
 import mysql.connector
 global cnx
 cnx = mysql.connector.connect(
@@ -108,3 +106,35 @@ def insert_order_tracking(order_id, status):
 
     # Closing the cursor
     cursor.close()
+
+def insert_customer_order(name, email, phone, address, payment_method):
+    try:
+            cursor = cnx.cursor()
+
+            # Insert the form data into the customer_orders table
+            insert_query = """
+                INSERT INTO customer_orders (name, email, phone, address, payment_method)
+                VALUES (%s, %s, %s, %s, %s)
+            """
+            values = (name, email, phone, address, payment_method)
+            cursor.execute(insert_query, values)
+
+            # Commit the changes to the database
+            cnx.commit()
+
+            print("Form data inserted into customer_orders table.")
+
+    except mysql.connector.Error as err:
+        print(f"Error inserting customer order into the database: {err}")
+
+        # Rollback changes if necessary
+        cnx.rollback()
+
+        raise
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        # Rollback changes if necessary
+        cnx.rollback()
+
+        raise
