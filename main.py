@@ -8,11 +8,21 @@ app = FastAPI()
 
 @app.post("/")
 async def handle_request(request: Request):
+
+      """
+    Handles incoming requests from Dialogflow webhook.
+
+    Parameters:
+        - request (Request): The FastAPI request object.
+
+    Returns:
+        - JSONResponse: Response containing fulfillment text based on the intent.
+    """
+
     #retrieve the json data from request
     payload = await request.json()
 
     #extract the necessary info from the payload
-    #based on the structure of webhook from dialog flow
     intent = payload['queryResult']['intent']['displayName']
     parameters = payload['queryResult']['parameters']
     output_contexts = payload['queryResult']['outputContexts']
@@ -29,7 +39,7 @@ async def handle_request(request: Request):
     return intent_handler_dict[intent](parameters, session_id)
 
 @app.post("/submit_form")
-async def submit_form(
+async def submit_form(     
     request: Request,
     name: str = Form(...),
     email: str = Form(...),
@@ -37,6 +47,21 @@ async def submit_form(
     address: str = Form(...),
     payment: str = Form(...),
 ):
+    """
+    Handles form submission, inserts customer order into the database.
+
+    Parameters:
+        - request (Request): The FastAPI request object.
+        - name (str): Customer name.
+        - email (str): Customer email.
+        - phone (str): Customer phone number.
+        - address (str): Customer address.
+        - payment (str): Payment method.
+
+    Returns:
+        - dict: Response message indicating successful form submission.
+    """
+
      print("hello")
      # Call the insert_customer_order function
      db_helper.insert_customer_order(name, email, phone, address, payment)
@@ -46,6 +71,17 @@ async def submit_form(
 inprogess_orders = {}
 
 def add_to_order(parameters: dict, session_id: str):
+
+     """
+    Handles adding items to the customer's order.
+
+    Parameters:
+        - parameters (dict): Dialogflow parameters containing food items and quantities.
+        - session_id (str): Unique session identifier.
+
+    Returns:
+        - JSONResponse: Response containing fulfillment text based on the action.
+    """
     food_items = parameters['food-item']
     quantities = parameters['number']
 
@@ -71,6 +107,18 @@ def add_to_order(parameters: dict, session_id: str):
 
 
 def remove_from_order(parameters: dict, session_id: str):
+
+     """
+    Handles removing items from the customer's order.
+
+    Parameters:
+        - parameters (dict): Dialogflow parameters containing food items.
+        - session_id (str): Unique session identifier.
+
+    Returns:
+        - JSONResponse: Response containing fulfillment text based on the action.
+    """
+
      if session_id not in inprogess_orders:
           fulfillment_text = "I am having trouble finding your order. Sorry for the inconvenience, please place your order again."
      else:
@@ -96,6 +144,16 @@ def remove_from_order(parameters: dict, session_id: str):
      return JSONResponse(content={"fulfillmentText": fulfillment_text})
 
 def save_to_db(order):
+
+     """
+    Saves the customer's order to the database.
+
+    Parameters:
+        - order (dict): Dictionary containing food items and quantities.
+
+    Returns:
+        - int: The order ID if successful, -1 otherwise.
+    """
      
     next_order_id = db_helper.get_next_order_id()
     for food_item, quantity in order.items():
@@ -108,6 +166,18 @@ def save_to_db(order):
     return next_order_id
 
 def complete_order(parameters: dict, session_id: str):
+
+      """
+    Handles completing the customer's order and saving it to the database.
+
+    Parameters:
+        - parameters (dict): Dialogflow parameters containing customer details.
+        - session_id (str): Unique session identifier.
+
+    Returns:
+        - JSONResponse: Response containing fulfillment text based on the action.
+    """
+
      if session_id not in inprogess_orders:
           fulfillment_text = "I am having trouble finding your order. Sorry for the inconvenience, please place your order again."
      else:
@@ -128,6 +198,18 @@ def complete_order(parameters: dict, session_id: str):
 
     
 def track_order(parameters: dict, session_id : str):
+
+      """
+    Handles tracking the status of a customer's order.
+
+    Parameters:
+        - parameters (dict): Dialogflow parameters containing order number.
+        - session_id (str): Unique session identifier.
+
+    Returns:
+        - JSONResponse: Response containing fulfillment text based on the action.
+    """
+    
         order_id = int(parameters['number'])
         order_status = db_helper.get_order_status(order_id)
 
