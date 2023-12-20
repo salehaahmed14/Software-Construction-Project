@@ -3,11 +3,22 @@ global cnx
 cnx = mysql.connector.connect(
     host= "localhost",
     user="root",
-    password="",#add your own dbms(MySQl) details
+    password="",
     database="FreshFood_eatery"
 )
-# Function to fetch the order status from the order_tracking table
+
 def get_order_status(order_id):
+    
+    """
+    Fetches the order status from the order_tracking table.
+
+    Parameters:
+        - order_id (int): The ID of the order.
+
+    Returns:
+        - str: The order status.
+    """
+
     cursor = cnx.cursor()
 
     # Executing the SQL query to fetch the order status
@@ -28,6 +39,14 @@ def get_order_status(order_id):
         return None
 
 def get_next_order_id():
+   
+    """
+    Gets the next available order_id.
+
+    Returns:
+        - int: The next available order_id.
+    """
+
     cursor = cnx.cursor()
 
     # Executing the SQL query to get the next available order_id
@@ -47,6 +66,18 @@ def get_next_order_id():
         return result + 1
 
 def insert_order_item(food_item, quantity, order_id):
+
+    """
+    Inserts an order item into the database.
+
+    Parameters:
+        - food_item (str): The name of the food item.
+        - quantity (int): The quantity of the food item.
+        - order_id (int): The ID of the order.
+
+    Returns:
+        - int: 1 if successful, -1 otherwise.
+    """
     try:
         cursor = cnx.cursor()
 
@@ -79,6 +110,16 @@ def insert_order_item(food_item, quantity, order_id):
         return -1
 
 def get_total_order_price(order_id):
+
+    """
+    Gets the total price of the order.
+
+    Parameters:
+        - order_id (int): The ID of the order.
+
+    Returns:
+        - float: The total price of the order.
+    """
     cursor = cnx.cursor()
 
     # Executing the SQL query to get the total order price
@@ -93,8 +134,20 @@ def get_total_order_price(order_id):
 
     return result
 
-# Function to insert a record into the order_tracking table
+
 def insert_order_tracking(order_id, status):
+
+    """
+    Inserts a record into the order_tracking table.
+
+    Parameters:
+        - order_id (int): The ID of the order.
+        - status (str): The status of the order.
+
+    Returns:
+        - None
+    """
+    
     cursor = cnx.cursor()
 
     # Inserting the record into the order_tracking table
@@ -108,6 +161,21 @@ def insert_order_tracking(order_id, status):
     cursor.close()
 
 def insert_customer_order(name, email, phone, address, payment_method):
+
+    """
+    Inserts customer order information into the customer_orders table.
+
+    Parameters:
+        - name (str): Customer name.
+        - email (str): Customer email.
+        - phone (str): Customer phone number.
+        - address (str): Customer address.
+        - payment_method (str): Payment method.
+
+    Returns:
+        - None
+    """
+
     try:
             cursor = cnx.cursor()
 
