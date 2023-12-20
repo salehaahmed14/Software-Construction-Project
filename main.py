@@ -8,8 +8,7 @@ app = FastAPI()
 
 @app.post("/")
 async def handle_request(request: Request):
-
-      """
+    """
     Handles incoming requests from Dialogflow webhook.
 
     Parameters:
@@ -46,7 +45,7 @@ async def submit_form(
     phone: str = Form(...),
     address: str = Form(...),
     payment: str = Form(...),
-):
+    ):
     """
     Handles form submission, inserts customer order into the database.
 
@@ -62,17 +61,17 @@ async def submit_form(
         - dict: Response message indicating successful form submission.
     """
 
-     print("hello")
+    print("hello")
      # Call the insert_customer_order function
-     db_helper.insert_customer_order(name, email, phone, address, payment)
+    db_helper.insert_customer_order(name, email, phone, address, payment)
      
-     return {"message": "Form submitted successfully"}
+    return {"message": "Form submitted successfully"}
 
 inprogess_orders = {}
 
 def add_to_order(parameters: dict, session_id: str):
 
-     """
+    """
     Handles adding items to the customer's order.
 
     Parameters:
@@ -145,7 +144,7 @@ def remove_from_order(parameters: dict, session_id: str):
 
 def save_to_db(order):
 
-     """
+    """
     Saves the customer's order to the database.
 
     Parameters:
@@ -167,7 +166,7 @@ def save_to_db(order):
 
 def complete_order(parameters: dict, session_id: str):
 
-      """
+    """
     Handles completing the customer's order and saving it to the database.
 
     Parameters:
@@ -178,9 +177,9 @@ def complete_order(parameters: dict, session_id: str):
         - JSONResponse: Response containing fulfillment text based on the action.
     """
 
-     if session_id not in inprogess_orders:
+    if session_id not in inprogess_orders:
           fulfillment_text = "I am having trouble finding your order. Sorry for the inconvenience, please place your order again."
-     else:
+    else:
           order = inprogess_orders[session_id]
           order_id = save_to_db(order)
 
@@ -192,14 +191,14 @@ def complete_order(parameters: dict, session_id: str):
                                    f"Your order id is: {order_id}."\
                                    f"Your total order amount is {order_total}$. Pay upon delivery."
      
-     del inprogess_orders[session_id]
+    del inprogess_orders[session_id]
 
-     return JSONResponse(content={"fulfillmentText": fulfillment_text})
+    return JSONResponse(content={"fulfillmentText": fulfillment_text})
 
     
 def track_order(parameters: dict, session_id : str):
 
-      """
+    """
     Handles tracking the status of a customer's order.
 
     Parameters:
@@ -210,12 +209,12 @@ def track_order(parameters: dict, session_id : str):
         - JSONResponse: Response containing fulfillment text based on the action.
     """
     
-        order_id = int(parameters['number'])
-        order_status = db_helper.get_order_status(order_id)
+    order_id = int(parameters['number'])
+    order_status = db_helper.get_order_status(order_id)
 
-        if order_status:
-            fulfillment_text = f"The order status for order id:{order_id} is: {order_status}"
-        else:
-             fulfillment_text = f"There is no order corresponding to order id:{order_id}"
+    if order_status:
+        fulfillment_text = f"The order status for order id:{order_id} is: {order_status}"
+    else:
+        fulfillment_text = f"There is no order corresponding to order id:{order_id}"
 
-        return JSONResponse(content={"fulfillmentText": fulfillment_text})
+    return JSONResponse(content={"fulfillmentText": fulfillment_text})
