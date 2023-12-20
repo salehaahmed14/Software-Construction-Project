@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <title>Fresh Food Eatery</title>
-        <link rel="stylesheet" href="styles.css">
-      </head>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Fresh Food Eatery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom styles for smaller carousel images */
+        img {
+            height: 500px; /* Adjust the height as needed */
+            width:60%;
+            object-fit: cover;
+        }
+    </style>
+</head>
 <body>
     <!-- Bootstrap Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -36,56 +44,39 @@
             </ul>
         </div>
     </nav>
-    <div class ="content-container">
-    <div class="container">
-        <div class="item">
-            <img src="images/chicken_curry.jpg" alt="Chicken Curry">
-            <h2>Chicken Curry</h2>
-            <p>Delicious and flavorful Hearty Meal with a Soul warming gravy. </p>
+
+    <!-- Bootstrap Carousel -->
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/plain_fries.jpg" class="d-block w-100" alt="Chicken Curry">
+            </div>
+            <div class="carousel-item">
+                <img src="images/pizza.jpg" class="d-block w-100" alt="Pizza">
+            </div>
+            <div class="carousel-item">
+                <img src="images/pasta.jpg" class="d-block w-100" alt="Pasta">
+            </div>
+            <!-- Add more carousel items as needed -->
         </div>
-        <div class="item">
-            <img src="images/pizza.jpg" alt="Pizza">
-            <h2>Pizza</h2>
-            <p>Fresh out of the Oven. Topped with fresh Marinara, Mozeralla and Flavorful Toppings.</p>
-        </div>
-        <div class="item">
-            <img src="images/pasta.jpg" alt="Pasta">
-            <h2>Pasta</h2>
-            <p>Creamy and Cheesy Deliciousness with a rich Alfredo Sauce.</p>
-        </div>
-        <div class="item">
-            <img src="images/chicken_burger.jpg" alt="Chicken Burger">
-            <h2>Chicken Burger</h2>
-            <p>Juicy and Tender Chicken Fillet in a Brioche Bun.</p>
-        </div>
-        <div class="item">
-            <img src="images/beef_burger.jpg" alt="Beef Burger">
-            <h2>Beef Burger</h2>
-            <p>Juicy and Charred to Perfection in a Whole Wheat Bun.</p>
-        </div>
-        <div class="item">
-            <img src="images/plain_fries.jpg" alt="Plain Fries">
-            <h2>Plain Fries</h2>
-            <p> Classic Salted. Great for a Quick Fix.</p>
-        </div>
-        <div class="item">
-            <img src="images/loaded_fries.jpg" alt="Loaded Fries">
-            <h2>Loaded Fries</h2>
-            <p>Loaded with Chicken, Cheese, Veggies and what not to keep those Cravings at Bay.</p>
-        </div>
-        <div class="item">
-            <img src="images/biryani.jpg" alt="Biryani">
-            <h2>Chicken Biryani</h2>
-            <p>Our very own Desi Lovers Paradise. Slow cooked Chicken in Aromatic Spices over a bed of fragrant Rice.</p>
-        </div>
-        <div class="item">
-            <img src="images/fried_chicken.jpg" alt="Fried Chicken">
-            <h2>Fried Chicken</h2>
-            <p>Crispy, Crunchy and Delightful, The Ultimate Cheat Meal.</p>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-</div>
-    <footer>
+
+    <!-- Content Container -->
+    <div class="content-container">
+        <!-- Your existing content goes here -->
+        <!-- ... -->
+    </div>
+
+    <!-- Bootstrap Footer -->
+<footer>
         <div class="address">
             <p>123 Main Street, Islamabad</p>
             <p>Pakistan, 44000</p>
@@ -94,7 +85,9 @@
         <p>&copy; 2023 FreshFood Delivery. All rights reserved.</p>
     </footer>
    
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JavaScript (Popper.js and Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
