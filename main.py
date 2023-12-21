@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Form
 from fastapi import Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse
 import db_helper as db_helper
 import generic_helper as generic_helper
 
@@ -37,35 +37,37 @@ async def handle_request(request: Request):
 
     return intent_handler_dict[intent](parameters, session_id)
 
-@app.post("/submit_form")
-async def submit_form(     
+@app.post("/submit_form", response_class=HTMLResponse)
+async def submit_form(
     request: Request,
     name: str = Form(...),
     email: str = Form(...),
     phone: str = Form(...),
     address: str = Form(...),
     payment: str = Form(...),
-    ):
-    """
-    Handles form submission, inserts customer order into the database.
-
-    Parameters:
-        - request (Request): The FastAPI request object.
-        - name (str): Customer name.
-        - email (str): Customer email.
-        - phone (str): Customer phone number.
-        - address (str): Customer address.
-        - payment (str): Payment method.
-
-    Returns:
-        - dict: Response message indicating successful form submission.
-    """
-
-    print("hello")
-     # Call the insert_customer_order function
-    db_helper.insert_customer_order(name, email, phone, address, payment)
+):
      
-    return {"message": "Form submitted successfully"}
+     # Call the insert_customer_order function
+     db_helper.insert_customer_order(name, email, phone, address, payment)
+    
+     # HTML content with JavaScript redirect
+     html_content = f"""
+        <html>
+            <head>
+                <script>
+                    // Redirect to the local file after a short delay
+                    setTimeout(function() {{
+                        window.location.href = 'http://localhost:8080/website.html';
+                    }}, 1000);
+                </script>
+            </head>
+            <body>
+                <p>Form submitted successfully. Redirecting...</p>
+            </body>
+        </html>
+    """
+
+     return HTMLResponse(content=html_content)
 
 inprogess_orders = {}
 
