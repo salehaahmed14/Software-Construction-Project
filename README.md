@@ -24,11 +24,7 @@ Before you begin, ensure you have the following tools and software installed on 
 2. 
 2. **Backend Setup:**
 
-- Navigate to the `backend` directory within the project folder:
-  ```
-  cd food-delivery-project/backend
-  ```
-
+- Open the cloned Repository in a code editor.
 - Create a virtual environment (optional but recommended):
   ```
   python -m venv venv
