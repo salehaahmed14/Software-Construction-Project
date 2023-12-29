@@ -53,7 +53,7 @@ Before you begin, ensure you have the following tools and software installed on 
 
 - Access the `frontend` directory.
 
-- Open the `website.html` file in a web browser (using live server) to access the FoodEase website.
+- Open the `website.html` file in a web browser (using a separate port) to access the FoodEase website.
 
 5. **Chatbot Integration:**
 
